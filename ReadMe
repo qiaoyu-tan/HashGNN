@@ -1,17 +1,37 @@
-Source code for the paper "Learning to Hash with Graph Neural Networks for Recommender Systems"
+Learning to Hash with Graph Neural Networks for Recommender Systems
 
+Original implementation for paper Learning to Hash with Graph Neural Networks for Recommender Systems.
 
-Reproduce the experimental results. The current version is a litter bit difference with the original one, since we
- transfer it from the PAI platform of Alibaba to normal server.
+Qiaoyu Tan, Ninghao Liu, Xing Zhao, Hongxia Yang, Jingren Zhou, Xia Hu
 
-nohup main.py --dataset DATANAME --final_dim 32 --batch_size 256 >results/DATANAME_result.txt 2>&1 &
+Accepted to WWWW 2020!
 
-
-# Other suggestion
-It would be better to perform a grid search of tradeoff parameter "lambda_" on new datasets in the range of (0.1,1.0).
-
-
-#Configuration
+Prerequisites
 Python==2.7
 faiss==1.5.3
 tensorflow==1.12
+
+Install Faiss-GPU based on the instructions here: https://github.com/facebookresearch/faiss/blob/master/INSTALL.md
+
+
+Training
+Training on the existing datasets
+You can use python main.py --dataset {dataset_name} to train a specific model on a dataset. Other hyperparameters can be found in the code.
+
+For example, you can use python main.py --dataset ml-1m to train HashGNN model on MovieLens dataset.
+
+
+Acknowledgement
+The implementation of Straight-through estimator is based on https://r2rt.com/binary-stochastic-neurons-in-tensorflow.html.
+
+
+Cite
+Please cite our paper if you find this code useful for your research:
+
+@inproceedings{tan2020learning,
+  title={Learning to Hash with Graph Neural Networks for Recommender Systems},
+  author={Tan, Qiaoyu and Liu, Ninghao and Zhao, Xing and Yang, Hongxia and Zhou, Jingren and Hu, Xia},
+  booktitle={Proceedings of The Web Conference 2020},
+  pages={1988--1998},
+  year={2020}
+}
