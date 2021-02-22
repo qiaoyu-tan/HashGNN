@@ -20,6 +20,8 @@ You can use python main.py --dataset {dataset_name} to train a specific model on
 
 For example, you can use python main.py --dataset ml-1m to train HashGNN model on MovieLens dataset.
 
+The current implmentation is a litter bit difference from the original one, since we reimplement the sampling function based on the samplestore package of PAI platform at Alibaba.
+
 
 Acknowledgement
 The implementation of straight-through estimator is based on https://r2rt.com/binary-stochastic-neurons-in-tensorflow.html.
