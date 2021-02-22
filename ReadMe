@@ -22,7 +22,7 @@ For example, you can use python main.py --dataset ml-1m to train HashGNN model o
 
 
 Acknowledgement
-The implementation of Straight-through estimator is based on https://r2rt.com/binary-stochastic-neurons-in-tensorflow.html.
+The implementation of straight-through estimator is based on https://r2rt.com/binary-stochastic-neurons-in-tensorflow.html.
 
 
 Cite
