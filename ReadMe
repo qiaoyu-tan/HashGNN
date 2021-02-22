@@ -1,0 +1,17 @@
+Source code for the paper "Learning to Hash with Graph Neural Networks for Recommender Systems"
+
+
+Reproduce the experimental results. The current version is a litter bit difference with the original one, since we
+ transfer it from the PAI platform of Alibaba to normal server.
+
+nohup main.py --dataset DATANAME --final_dim 32 --batch_size 256 >results/DATANAME_result.txt 2>&1 &
+
+
+# Other suggestion
+It would be better to perform a grid search of tradeoff parameter "lambda_" on new datasets in the range of (0.1,1.0).
+
+
+#Configuration
+Python==2.7
+faiss==1.5.3
+tensorflow==1.12
